@@ -1,0 +1,14 @@
+<div class="gestion">
+   <img src="image/cat_resultat.png" alt="Une coupe" />
+   <h1>Resultats</h1>
+   <p>Sélectionner un grand prix :</p>
+
+   <form action="/selectionGP" method="POST">
+      <select name="gpnum" id="gp" required>
+               {{#each choix}}
+                  <option value="{{this.gpnum}}">{{this.gpnom}}</option>
+               {{/each}}
+      </select>
+      <input type="submit" value="VALIDER" class="btnValider"/>
+   </form>
+</div>

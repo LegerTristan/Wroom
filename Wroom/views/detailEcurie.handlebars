@@ -1,0 +1,57 @@
+<section class="affichageEnDeuxColonnes">
+   {{#if infoEcurie.fpnum}}
+      <article class="tabAuMur">
+         <div class="infoEcurie">
+            <img class="imageEcurie" src="/image/ecurie/{{infoEcurie.ecuadresseimage}}" alt="Photo officielle de l'écurie "/>
+            <aside>
+               <p><strong>Nom :</strong> {{infoEcurie.ecunom}}</p>
+               <p><strong>Directeur :</strong> {{infoEcurie.ecunomdir}}</p>
+               <p><strong>Adresse :</strong> {{infoEcurie.ecuadrsiege}}</p>
+               <p><strong>Pays :</strong> {{infoEcurie.paynom}}</p>
+               </aside>
+         </div>
+         {{#if infoEcurie.piloteEcurie}}
+            <br />
+            <div class="flexColumn">
+               <p><strong>Pilotes : </strong></p>
+               {{#each infoEcurie.piloteEcurie}}
+                  <a id="infobulle">{{this.pilprenom}} {{this.pilnom}}
+                     <div class="affiInfo">
+                        <img class="imgPiloteEcu" src="/image/pilote/{{this.phoadresse}}" alt="Photo officielle du pilote "/>
+                        <p><strong>{{this.pilnom}} {{this.pilprenom}}</strong><br />
+                        {{this.piltexte}}</p>
+                     </div>
+                  </a>
+               {{/each}}
+            </div>
+         {{/if}}
+
+         {{#if infoEcurie.voitureEcurie}}
+            <br />
+            <div class="imagesVoiture">
+               {{#each infoEcurie.voitureEcurie}}
+                  <div class="listeInfoVoiture">
+                     <img class="imgVoiture" src="/image/ecurie/voiture/{{this.voiadresseimage}}" alt="Photo d'une voiture de l'écurie "/>
+                     <p>{{this.voinom}}</p>
+                     <p>{{this.typelibelle}}</p>
+                  </div>
+               {{/each}}
+            </div>
+         {{/if}}
+      </article>        
+   {{else}}
+      <article>  
+         <div class="infoEcurie">
+               <img class="imageBouton" src="/image/ecurie/{{infoEcurie.ecuadresseimage}}" alt="Photo officielle de l'écurie "/>
+               <aside>
+                  <p><strong>Nom :</strong> {{infoEcurie.ecunom}}</p>
+                  <p><strong>Directeur :</strong> {{infoEcurie.ecunomdir}}</p>
+                  <p><strong>Adresse :</strong> {{infoEcurie.ecuadrsiege}}</p>
+                  <p><strong>Pays :</strong> {{infoEcurie.paynom}}</p>   
+               </aside>
+            </div> 
+            <p>Cette écurie ne participe pas au championnat cette année</p>
+         </article>      
+      {{/if}}
+   {{> listerEcuriePartial }}
+</section>

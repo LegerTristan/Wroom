@@ -1,0 +1,56 @@
+<h1 id="titre">Modifier un Pilote</h1>
+
+<form class="ajout" action="/editPilote" method="POST">
+    <div class="groupLb">
+       <label>Prénom</label>
+       <label>Nom</label>
+       <label>Date de naissance</label>
+       <label>Nationalité</label>
+       <label>Ecurie</label>
+       <label>Points</label>
+       <label>Poids</label>
+       <label>Taille</label>
+       <label class="decalage">Description</label>
+       <label>Sujet de la photo</label>
+       <label class="decalage">Commentaire</label>
+       <label>Photo</label>
+   </div>
+    <div class="groupeInput">
+        
+        <input type="text" name="pilprenom" id="prenom" placeholder="{{infos.pilprenom}}" autofocus required />
+        <input type="text" name="pilnom" id="nom" placeholder="{{infos.pilnom}}" required />
+
+        <input type="date" name="pildatenais" id="date" required />
+            
+        <select name="paynum" id="nation" required>
+            {{#each nationalites}}
+                <option value="{{this.paynum}}">{{this.paynat}}</option>
+            {{/each}}
+        </select>
+
+        <select name="ecunum" id="ecurie">
+            {{#each ecuries}}
+                <option value="{{this.ecunum}}">{{this.ecunom}}</option>
+            {{/each}}
+        </select>
+
+        <div class="lbInput">
+            <input type="number" name="pilpoints" id="pts" required>pts</input>
+        </div>
+        <div class="lbInput">
+            <input type="number" name="pilpoids" id="poids" placeholder="{{infos.pilpoids}}" required>kg</input>
+        </div>
+        <div class="lbInput">
+            <input type="number" name="piltaille" id="taille" placeholder="{{infos.piltaille}}" required>cm</input>
+        </div>
+        <textarea name="piltexte" id="desc" placeholder="{{infos.piltexte}}" required></textarea>
+
+        <input name="phosujet" type="text" placeholder="{{infosPhoto.phosujet}}" required/>
+
+        <textarea name="phocommentaire" placeholder="{{infosPhoto.phocommentaire}}" required></textarea>
+
+        <input name="phoadresse" type="file" required/>
+
+        <input type="submit" value="Modifier" class="btnValider"/>
+    </div>
+</form>

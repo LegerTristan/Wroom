@@ -1,0 +1,109 @@
+.gestion{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.gestion h1, .gestion a, .gestion tab{
+	margin: 1% 0%;
+}
+
+.gestion table > thead > tr > td{
+	font-weight: bold;
+	text-align: center;
+}
+
+.gestion > table{
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+.gestion > table > tbody > tr > td, .gestion > table > thead > tr > td{
+	border: 1px solid black;
+	padding: 5px;
+	margin: 0%;
+}
+
+.gestion table{
+	margin-top: 1%;
+}
+
+.gestion > table > tbody > tr > td > a{
+	padding-right: 5px;
+}
+
+.gestion form{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+
+#titre{
+	text-align: center;
+	margin-bottom: 3%;
+}
+
+.ajout{
+	display: flex;
+}
+
+.groupLb{
+	display: flex;
+	flex-direction: column;
+	flex: 0.15;
+}
+
+.groupLb label{
+	margin-bottom: 10px;
+	margin-right: 80px;
+	width: 120%;
+}
+
+.groupeInput{
+	display: flex;
+	flex-direction: column;
+	flex: 0.85;
+}
+
+.groupeInput label{
+	font-size: 14px;
+}
+
+.groupeInput input[type=text], .groupeInput select, .groupeInput input[type=date], .groupeInput input[type=number]{
+	font-size: 11px;
+	width: 30%;
+	border: solid black 1px;
+	margin: 5px 0px;
+}
+
+.groupeInput input[type=text], .groupeInput textarea, .groupeInput input[type=date],.groupeInput input[type=number]{
+	
+	border-radius: 8px;
+	margin-right: 1%;
+}
+
+.groupeInput textarea{
+
+	border: solid black 1px;
+	margin: 5px 0px;
+	width: 30%;
+}
+
+.lbInput{
+	display: flex;
+}
+
+.btnValider{
+	align-self: center;
+	cursor: pointer;
+	padding: 5px 10px;
+	background-image: linear-gradient(black, red);
+	border: solid black 1px;
+	color: white;
+}
+
+.decalage{
+	margin-bottom: 28% !important;
+}

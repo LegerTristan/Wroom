@@ -1,0 +1,24 @@
+<div class="gestion">
+    <img src="image/cat_sponsorisation.png" alt="SPONSOR" />
+    <h1>Gestion des Sponsorisations</h1>
+    <a href="/addSponsorisation"><img src="image/act_add.png" alt="Ajouter"/> Ajouter une sponsorisation</a>
+
+    <table>
+        <thead>
+            <tr>
+                <td>Pilote</td>
+                <td>Est sponsorisé par</td> 
+                <td>Actions</td>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each gestion}}
+                <tr>
+                    <td>{{this.pilnom}}</td>
+                    <td>{{this.sponom}}</td>
+                    <td><a href="/suppSponsorisation/{{this.sponum}}/{{this.pilnum}}"><img src="image/act_delete.png" alt="Supprimer"/> Supprimer</a></td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

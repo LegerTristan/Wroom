@@ -1,0 +1,23 @@
+<h1 id="titre">Ajouter un sponsor</h1>
+
+<form class="ajout" action="/gestSponsors" method="POST">
+    <div class="groupLb">
+       <label>Nom</label>
+       <label>Secteur d'activite</label>
+       <label>Ecurie sponsorisée</label>
+   </div>
+    <div class="groupeInput">
+            
+        <input type="text" name="sponom" id="nom" autofocus required />
+        <input type="text" name="sposectactivite" id="sectActivite" required />
+
+        <select id="ecurieSponso" name="ecunum">
+            <option value="0">Aucune</option>
+            {{#each ecuries}}
+                <option value="{{this.ecunum}}">{{this.ecunom}}</option>
+            {{/each}}
+        </select>
+
+        <input type="submit" value="AJOUTER" class="btnValider"/>
+    </div>
+</form>

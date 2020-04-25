@@ -1,0 +1,22 @@
+<h1 id="titre">Modifier un Sponsor</h1>
+
+<form class="ajout" action="/editSponsor" method="POST">
+    <div class="groupLb">
+       <label>Nom</label>
+       <label>Secteur d'activité</label>
+       <label>Ecurie</label>
+   </div>
+    <div class="groupeInput">
+        
+        <input type="text" name="sponom" id="sponom" placeholder="{{infos.sponom}}" autofocus required />
+        <input type="text" name="sposectactivite" id="sposectactivite" placeholder="{{infos.sposectactivite}}" required />
+
+        <select name="ecunum" id="ecurie">
+            {{#each ecuries}}
+                <option value="{{this.ecunum}}">{{this.ecunom}}</option>
+            {{/each}}
+        </select>
+
+        <input type="submit" value="Modifier" class="btnValider"/>
+    </div>
+</form>

@@ -1,0 +1,18 @@
+<section class="affichageEnDeuxColonnes">
+   {{#each infoCircuit}}
+         <article class="infoCircuit">
+               <img class="imageBouton" src="/image/circuit/{{this.ciradresseimage}}" alt="Photo du circuit "/>
+               <aside>
+                  <p><strong>Nom :</strong> {{this.cirnom}}</p>
+                  <p><strong>Longueur :</strong> {{this.cirlongueur}} m</p>
+                  <p><strong>Nombre de spectateurs :</strong> {{this.cirnbspectateurs}}</p>
+                  <p><strong>Pays :</strong> {{this.paynom}}</p>
+               </aside>
+         </article>
+   {{/each}}
+   {{> listerCircuitPartial }}
+</section>
+{{#each infoCircuit}}
+   <p>{{this.cirtext}}</p>
+{{/each}}
+

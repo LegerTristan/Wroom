@@ -1,0 +1,26 @@
+<div class="gestion">
+    <img src="image/cat_circuit.png" alt="Drapeau de départ de course" />
+    <h1>Gestion des Circuits</h1>
+    <a href="/addCircuit"><img src="image/act_add.png" alt="Ajouter"/> Ajouter un circuit</a>
+
+    <table>
+        <thead>
+            <tr>
+                <td>Nom</td>
+                <td>Longueur</td>
+                <td>Nombre de spectateurs</td>
+                <td>Actions</td>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each gestion}}
+                <tr>
+                    <td>{{this.cirnom}}</td>
+                    <td>{{this.cirlongueur}}</td>
+                    <td>{{this.cirnbspectateurs}}</td>
+                    <td><a href="/editCircuit/{{this.cirnum}}"><img src="image/act_edit.png" alt="Modifier"/> Modifier</a> <a href="/suppCircuit/{{this.cirnum}}"><img src="image/act_delete.png" alt="Supprimer"/> Supprimer</a></td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

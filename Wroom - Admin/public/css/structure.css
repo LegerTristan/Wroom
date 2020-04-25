@@ -1,0 +1,119 @@
+    body {
+    	font-family: "Segoe UI", "DejaVu Sans",Verdana, sans-serif;
+    	background: url('/image/fond.jpg') repeat;
+		  font-size:0.8em;
+    	margin: 0;
+    	padding: 0;
+    	text-align: center;
+    	color: #000000;
+    }
+    .monBody #container {
+    	width: 900px;
+    	margin: 0 auto;
+    	text-align: left;
+    	background:#ffffff;
+    }
+    .monBody #header {
+		    height:300px;
+    }
+	.monBody #menu {
+		height:22px;
+		color:#ffffff;
+		font-size:1.4em;
+		background:#000000;
+    }
+  .monBody #contenu {
+		 padding:20px;
+    }
+    .monBody #footer {
+    padding: 0 10px;
+		font-size:0.8em;
+		text-align:center;
+		height:150px;
+		background:url(/image/footer.jpg) no-repeat;
+    }
+	#menu a	{
+		color:#ffffff;
+		text-decoration:none;
+	}
+  #menu {
+    text-align: center;
+  }
+  #LogoNode {
+      max-height: 20%;
+      max-width: 20%;
+  }
+.tabpayscir  {
+ 	float:right;
+ 	padding:10px;
+ 	border:1px solid black;
+	margin:10px;
+	border-radius:15px;
+	-moz-border-radius:15px;
+}
+
+.flexTab {
+	display: flex;
+	align-items: center;
+}
+
+.imgTab{
+	width: 30px;
+	height: 30px;
+	margin-right: 5px;
+}
+
+
+ .myboth  {
+ 	  clear:both;
+ }
+ a  {
+ 	text-decoration:none;
+ 	color:#0072ff;
+ }
+ .lienNotFound {align:center; style="background-color: #1d81b1;color: #FFFFFF;text-transform: uppercase;"}
+
+.photoNotFound {
+   max-height: 40%;
+   max-width: 40%;
+}
+
+.affichageEnDeuxColonnes{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.connexion{
+	background-color:black;
+	margin-left: 30%;
+	margin-right: 30%;
+	text-align: center;
+	padding: 1% 6%;
+}
+
+.connexion > h1, .connexion p{
+	color: white;
+	font-weight: bold;
+}
+
+.connexion > h1{
+	font-size: 18px;
+}
+
+.connexion > form > div{
+
+	display: flex;
+	justify-content:  space-between;
+	align-items: center;
+}
+
+.connexion button, .connexion input[type="submit"]{
+
+	border-radius: 3px;
+	margin: 0% 3%;
+}
+
+#img{
+	width: 50%;
+}

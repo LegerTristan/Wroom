@@ -1,0 +1,8 @@
+<div class="dernierGP">
+    {{#each affichage}}
+        <h1>DERNIERS RÉSULTATS</h1>
+        <p><strong>{{this.gpnom}} du {{formatDate this.gpdate 'DD/MM/YYYY' }}</strong></p>
+        <p>Mise à jour le : {{formatDate this.gpdatemaj 'DD/MM/YYYY' }}</p>
+        <a href="/resultats">Voir les résultats</a>
+    {{/each}}
+</div>

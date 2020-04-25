@@ -1,0 +1,31 @@
+#gp{
+	font-size: 11px;
+	border: solid black 1px;
+	margin: 10px 0px;
+}
+
+.tabGP{
+	border: 1px solid black;
+}
+
+.tabGP > select, .tabGP input{
+	font-size: 11px;
+	padding: 0px;
+}
+
+.tab{
+	display: flex;
+}
+
+.tab table{
+	border-collapse: collapse;
+	margin-bottom: 10px;
+}
+
+.tab tr, .tab td{
+	padding: 3px;
+}
+
+.tailleImg{
+	width: 75%;
+}

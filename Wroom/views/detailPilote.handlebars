@@ -1,0 +1,48 @@
+{{> listerPiloteNom }}
+<table>
+    <tr>
+        {{#each infoPilote}}
+            <td>
+                <img class="imageBouton" src="/image/pilote/{{this.phoadresse}}" alt="Photo officielle du pilote "/>
+            </td>
+            <td>
+                <p><strong>Nom :</strong> {{this.pilnom}} {{this.pilprenom}}</p>
+                <p><strong>Date de naissance :</strong> {{formatDate this.pildatenais 'dddd DD MMMM YYYY' }}</p>
+                <p><strong>Nationalité :</strong> {{this.paynom}}</p>
+                {{#if this.ecunom}}
+                    <p><strong>Écurie :</strong> {{this.ecunom}}</p>
+                {{else}}
+                    <p><strong>Écurie :</strong> Pas d'écurie cette année</p> <!-- Accent : prb ? -->
+                {{/if}}
+            </td>
+            <td>
+                <p><strong>Poids :</strong> {{this.pilpoids}}  Kg</p>
+                <p><strong>Taille :</strong> {{this.piltaille}} Cm</p>
+            </td>
+        {{/each}}
+    </tr>
+</table>
+<div class="sponsorsPilote">
+    {{#if sponsor}}    
+        <p><strong>Principaux sponsors :</strong></p>
+        {{#each sponsor}}            
+            <p><strong>{{this.sponom}}</strong> ({{this.sposectactivite}})</p>
+        {{/each}}
+    {{/if}}
+</div>
+
+<div>
+    {{#each text}}
+        <p><strong>Qui suis-je ? :</strong> {{this.piltexte}}</p>
+    {{/each}}
+</div>
+
+{{#if photos}}
+    <div class="affichagePilote">
+        {{#each photos}}
+            <a href="/image/pilote/{{this.phoadresse}}" data-lightbox="image" data-title="{{this.phosujet}} <br /> {{this.phocommentaire}}">
+                <img src="/image/pilote/{{this.phoadresse}}" class="photoPilote" alt="Photo du pilote"/>
+            </a>
+        {{/each}}
+    </div>
+{{/if}}

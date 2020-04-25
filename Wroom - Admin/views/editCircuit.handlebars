@@ -1,0 +1,34 @@
+<h1 id="titre">Modifier un circuit</h1>
+
+<form class="ajout" action="/editCircuit" method="post" enctype="multipart/form-data">
+    <div class="groupLb">
+       <label>Nom</label>
+       <label>Longueur</label>
+       <label>Pays</label>
+       <label>Image</label>
+       <label>Nombre de spectateurs</label>   
+       <label>Description</label>
+   </div>
+    <div class="groupeInput">
+            
+        <input type="text" name="cirnom" id="nom" placeholder="{{infos.cirnom}}" autofocus required />
+        <div class="lbInput">
+            <input type="text" name="cirlongueur" id="lgr" placeholder="{{infos.cirlongueur}}" required>m</input>
+        </div>
+
+        <select id="pays" name="paynum" required>
+            {{#each pays}}
+                <option value="{{this.paynum}}">{{this.paynom}}</option>
+            {{/each}}
+        </select>
+
+        <input type="file" name="ciradresseimage" required />
+
+        <div class="lbInput">
+            <input type="text" name="cirnbspectateurs" id="specs" placeholder="{{infos.cirnbspectateurs}}" required>personnes</input>
+        </div>
+        
+        <textarea name="cirtext" id="desc" placeholder="{{infos.cirtext}}" required></textarea>
+        <input type="submit" value="MODIFIER" class="btnValider"/>
+    </div>
+</form>

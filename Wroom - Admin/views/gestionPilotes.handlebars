@@ -1,0 +1,26 @@
+<div class="gestion">
+    <img src="image/cat_pilote.png" alt="Casque de pilote F1" />
+    <h1>Gestion des Pilotes</h1>
+    <a href="/addPilote"><img src="image/act_add.png" alt="Ajouter"/> Ajouter un pilote</a>
+
+    <table>
+        <thead>
+            <tr>
+                <td>Nom</td>
+                <td>Prénom</td>
+                <td>Date de naissance</td>
+                <td>Actions</td>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each gestion}}
+                <tr>
+                    <td>{{this.pilnom}}</td>
+                    <td>{{this.pilprenom}}</td>
+                    <td>{{formatDate this.pildatenais 'DD/MM/YYYY' }}</td>
+                    <td><a href="/editPilote/{{this.pilnum}}"><img src="image/act_edit.png" alt="Modifier"/> Modifier</a> <a href="/suppPilote/{{this.pilnum}}"><img src="image/act_delete.png" alt="Supprimer"/> Supprimer</a></td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

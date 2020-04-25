@@ -1,0 +1,10 @@
+{{> listerPiloteNom }}
+<div class="affichageBouton">
+    {{#each data}}
+        <div>
+            <img class="imageBouton" src="/image/pilote/{{this.phoadresse}}" alt="Photo officielle du pilote "/>
+            <a class="nomPrePilote" href="/detailPilote/{{this.pilnum}}">{{this.pilprenom}} </a>
+            <a class="nomPrePilote" href="/detailPilote/{{this.pilnum}}">{{this.pilnom}}</a>
+        </div>
+    {{/each}}
+</div>

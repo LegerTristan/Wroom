@@ -1,0 +1,63 @@
+.infoEcurie{
+	display: flex;
+}
+
+.tabAuMur{
+	flex: 2;
+}
+
+.infoEcurie aside{
+	margin-left: 2%
+}
+ .imageEcurie{
+	width: 100px;
+	height: 200px;
+ }
+
+.flexColumn{
+	display: flex;
+	flex-direction: column;
+}
+
+.imgVoiture{
+	width: 150px;
+	height: 150px;
+	margin: 0px 5px;
+}
+
+.imagesVoiture{
+	display: flex;
+}
+
+.listeInfoVoiture{
+	display: flex;
+	flex-direction: column;
+}
+
+.listeInfoVoiture p{
+margin: 0px;
+}
+
+#infobulle:hover div{
+	display: block;
+	cursor: pointer;
+}
+
+#infobulle div{
+	display: none;
+	position: absolute;
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+.imgPiloteEcu{
+	width: 100px;
+	height: 150px;
+	float: left;
+	margin-right: 5px;
+}
+
+.affiInfo p{
+	color: black;
+}

@@ -1,0 +1,24 @@
+<div class="gestion">
+    <img src="image/cat_sponsor.png" alt="Représentation artistique d'un accord" />
+    <h1>Gestion des Sponsors</h1>
+    <a href="/addSponsor"><img src="image/act_add.png" alt="Ajouter"/> Ajouter un sponsor</a>
+
+    <table>
+        <thead>
+            <tr>
+                <td>Nom</td>
+                <td>Activite</td> 
+                <td>Actions</td>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each gestion}}
+                <tr>
+                    <td>{{this.sponom}}</td>
+                    <td>{{this.sposectactivite}}</td>
+                    <td><a href="/editSponsor/{{this.sponum}}"><img src="image/act_edit.png" alt="Modifier"/> Modifier</a> <a href="/suppSponsor/{{this.sponum}}"><img src="image/act_delete.png" alt="Supprimer"/> Supprimer</a></td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

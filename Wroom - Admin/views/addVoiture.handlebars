@@ -1,0 +1,30 @@
+<h1 id="titre">Ajouter un lien voiture/écurie</h1>
+
+<form class="ajout" action="/gestVoitures" method="POST" name="data" enctype="multipart/form-data">
+    <div class="groupLb">
+       <label>Est dans l'écurie</label>
+       <label>Type</label>
+       <label>Nom</label>
+       <label>Image</label>
+   </div>
+    <div class="groupeInput">
+
+        <select name="ecunum">
+            {{#each ecuries}}
+                <option value="{{this.ecunum}}">{{this.ecunom}}</option>
+            {{/each}}
+        </select>
+
+        <select name="typnum">
+            {{#each typeVoitures}}
+                <option value="{{this.typnum}}">{{this.typelibelle}}</option>
+            {{/each}}
+        </select>
+        
+        <input type="text" name="voinom" id="nom" required />
+
+        <input name="voiadresseimage" type="file" required/>
+
+        <input type="submit" value="AJOUTER" class="btnValider"/>
+    </div>
+</form>

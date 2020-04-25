@@ -1,0 +1,55 @@
+<h1 id="titre">Modifier une ecurie</h1>
+
+<form class="ajout" action="/editEcurie" method="post" enctype="multipart/form-data">
+    <div class="groupLb">
+        <label>Fournisseur de pneu</label>
+        <label>Nom</label>
+        <label>Directeur</label>
+        <label class="decalage">Adresse du siege</label>
+        <label>Points</label>
+        <label>Pays</label>
+        <label>Image</label>
+        <label>Nom de la voiture utilisée</label>
+        <label>Type de voiture</label>
+        <label>Photo de la voiture</label>
+       
+      
+   </div>
+    <div class="groupeInput">
+        
+        <select name="fpnum" required>
+            {{#each fpneu}}
+                <option value="{{this.fpnum}}">{{this.fpnom}}</option>
+            {{/each}}
+        </select>
+
+        <input type="text" name="ecunom" placeholder="{{infos.ecunom}}" autofocus required />
+        <input type="text" name="ecunomdir" placeholder="{{infos.ecunomdir}}" required />
+
+        <textarea name="ecuadrsiege" placeholder="{{infos.ecuadrsiege}}" required></textarea>
+        
+        <div class="lbInput">
+            <input type="text" name="ecupoints" required>pts</input>
+        </div>
+
+        <select name="paynum" required>
+            {{#each pays}}
+                <option value="{{this.paynum}}">{{this.paynom}}</option>
+            {{/each}}
+        </select>
+
+        <input name="ecuadresseimage" type="file" required />
+
+        <input type="text" name="voinom" placeholder="{{infosVoiture.voinom}}" required/>
+
+        <select name="typnum" required>
+            {{#each typeVoiture}}
+                <option value="{{this.typnum}}">{{this.typelibelle}}</option>
+            {{/each}}
+        </select>
+
+        <input name="voiadresseimage" type="file" required />
+
+        <input type="submit" value="MODIFIER" class="btnValider"/>
+    </div>
+</form>

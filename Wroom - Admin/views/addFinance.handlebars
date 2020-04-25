@@ -1,0 +1,24 @@
+<h1 id="titre">Ajouter une Finance</h1>
+
+<form class="ajout" action="/gestFinances" method="POST">
+    <div class="groupLb">
+       <label>Sponsor</label>
+       <label>Ecurie sponsorisée</label>
+   </div>
+    <div class="groupeInput">
+
+        <select name="sponum">
+            {{#each sponsors}}
+                <option value="{{this.sponum}}">{{this.sponom}}</option>
+            {{/each}}
+        </select>
+
+        <select name="ecunum">
+            {{#each ecuries}}
+                <option value="{{this.ecunum}}">{{this.ecunom}}</option>
+            {{/each}}
+        </select>
+
+        <input type="submit" value="AJOUTER" class="btnValider"/>
+    </div>
+</form>

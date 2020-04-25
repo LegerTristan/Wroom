@@ -1,0 +1,105 @@
+<div class="gestion">
+   <h1>Saisie des résultats</h1>
+
+   <script>
+      function test(){
+         document.formulaire.submit();
+      }
+
+   </script>
+
+   <form name="formulaire" method="post" action="/ajoutResultat">
+      <article class="infoGP">
+         {{#ifCond piloteCourse.length '<' 10}}
+            <div class="tab">
+                     <table>
+                        <thead>
+                           <tr>
+                              <td></td>
+                              <td><strong>Pilote</strong></td>
+                              <td><strong>Temps</strong></td>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           {{#each piloteCourse}}
+                              <tr class="tdGP">
+                                    <td class="tabGP"><a href="/saisieResultat/{{this.pilnum}}"><img src="/image/act_delete.png" alt="Supprimer un pilote" class="tailleImg"/></a></td>
+                                    <td class="tabGP">{{this.pilnom}}</td>  
+                                    <td class="tabGP">{{this.tempscourse}}</td> 
+                              </tr>
+                           {{/each}}
+                           <tr class="tdGP">
+                              <td class="tabGP"><a href="#" onclick="test()"><img src="/image/act_add.png" alt="Ajouter un pilote" class="tailleImg"/></a></td>
+                              <td class="tabGP">
+                                 <select name="pilnum">
+                                    {{#each otherPilotes}}
+                                       <option value="{{this.pilnum}}">{{this.pilnom}}</option>
+                                    {{/each}}
+                                 </select>
+                              </td>  
+                              <td class="tabGP"><input type="text" name="tempscourse" /></td> 
+                           </tr> 
+                        </tbody>
+                     </table>
+                     <table>
+                        <thead>
+                           <tr>
+                              <td><strong>Place</strong></td>
+                              <td><strong>Nb points</strong></td>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           {{#each points}}
+                              <tr class="tdGP">
+                                 <td class="tabGP">{{this.ptplace}}</td>
+                                 <td class="tabGP">{{this.ptnbpointsplace}}</td>
+                              </tr>
+                           {{/each}}
+                              <tr class="tdGP">
+                                 <td class="tabGP"> - </td>
+                                 <td class="tabGP"> - </td>
+                              </tr>
+                        </tbody>
+                     </table>
+                  </div>
+         {{else}}
+            <div class="tab">
+               <table>
+                  <thead>
+                     <tr>
+                        <td></td>
+                        <td><strong>Pilote</strong></td>
+                        <td><strong>Temps</strong></td>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     {{#each piloteCourse}}
+                        <tr class="tdGP">
+                           <td class="tabGP"><a href="/saisieResultat/{{this.pilnum}}"><img src="/image/act_delete.png" alt="Supprimer" class="tailleImg"/></a></td>
+                           <td class="tabGP">{{this.pilnom}}</td>  
+                           <td class="tabGP">{{this.tempscourse}}</td> 
+                        </tr>
+                     {{/each}}
+                  </tbody>
+               </table>
+               <table>
+                  <thead>
+                     <tr>
+                        <td><strong>Place</strong></td>
+                        <td><strong>Nb points</strong></td>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     {{#each points}}
+                        <tr class="tdGP">
+                           <td class="tabGP">{{this.ptplace}}</td>
+                           <td class="tabGP">{{this.ptnbpointsplace}}</td>
+                        </tr>
+                     {{/each}}
+                  </tbody>
+               </table>
+            </div>
+         {{/ifCond}}
+      </article>
+   </form>
+</div>

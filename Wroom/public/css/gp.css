@@ -1,0 +1,39 @@
+.infoGP{
+	flex: 2;
+}
+
+.dernierGP{
+	border: solid black 1px;
+	border-radius: 8px;
+	width: 50%;
+	margin-left: 25%;
+	padding-bottom: 10px;
+}
+
+.dernierGP > p{
+	margin: 0px 10px;
+}
+
+.dernierGP > a{
+	margin-left: 10px;
+}
+
+.dernierGP > h1{
+	text-align: center;
+	text-decoration: underline;
+	font-weight: normal;
+	font-size: 18px;
+	letter-spacing: 2px;
+}
+
+.tabGP{
+	border: 1px solid black;
+}
+
+.tab{
+	display: flex;
+}
+
+.tab table{
+	border-collapse: collapse;
+}

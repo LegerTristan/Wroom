@@ -1,0 +1,27 @@
+<div class="gestion">
+    <img src="image/cat_ecurie.png" alt="Voiture de F1" />
+    <h1>Gestion des Ecuries</h1>
+    <a href="/addEcurie"><img src="image/act_add.png" alt="Ajouter"/> Ajouter une ecurie</a>
+    <a href="/gestVoitures"><img src="image/act_edit.png" alt="Gérer"/> Gérer les voitures</a>
+
+    <table>
+        <thead>
+            <tr>
+                <td>Nom</td>
+                <td>Directeur</td>
+                <td>Points</td>
+                <td>Actions</td>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each gestion}}
+                <tr>
+                    <td>{{this.ecunom}}</td>
+                    <td>{{this.ecunomdir}}</td>
+                    <td>{{ecupoints}}</td>
+                    <td><a href="/editEcurie/{{this.ecunum}}"><img src="image/act_edit.png" alt="Modifier"/> Modifier</a> <a href="/suppEcurie/{{this.ecunum}}"><img src="image/act_delete.png" alt="Supprimer"/> Supprimer</a></td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

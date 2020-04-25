@@ -1,0 +1,41 @@
+<section class="affichageEnDeuxColonnes">
+   <article class="infoGP">
+      <h1>{{infoGP.gpnom}} ({{formatDate infoGP.gpdate 'DD/MM/YYYY' }})</h1>
+      <div class="tab">
+         <table>
+            <thead>
+               <tr>
+                  <td><strong>Pilote</strong></td>
+                  <td><strong>Temps</strong></td>
+               </tr>
+            </thead>
+            <tbody>
+               {{#each piloteCourse}}
+                  <tr class="tdGP">
+                     <td class="tabGP">{{this.pilnom}}</td>  
+                     <td class="tabGP">{{this.tempscourse}}</td> 
+                  </tr>
+               {{/each}}
+            </tbody>
+         </table>
+         <table>
+            <thead>
+               <tr>
+                  <td><strong>Place</strong></td>
+                  <td><strong>Nb points</strong></td>
+               </tr>
+            </thead>
+            <tbody>
+               {{#each points}}
+                  <tr class="tdGP">
+                     <td class="tabGP">{{this.ptplace}}</td>
+                     <td class="tabGP">{{this.ptnbpointsplace}}</td>
+                  </tr>
+               {{/each}}
+            </tbody>
+         </table>
+      </div>
+   </article>
+   {{> listerResultatPartial }}
+</section>
+<p>{{infoGP.gpcommentaire}}</p>

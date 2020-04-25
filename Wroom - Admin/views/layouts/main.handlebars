@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<title> {{title}}</title>
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/x-icon" href="/image/favicon.png" />
+
+	<script src="/js/lightbox-plus-jquery.js"></script>
+
+	<link rel="stylesheet" href="/css/structure.css" />
+	<link rel="stylesheet" href="/css/pilote.css" />
+	<link rel="stylesheet" href="/css/circuit.css"/>
+	<link rel="stylesheet" href="/css/ecurie.css"/>
+	<link rel="stylesheet" href="/css/gp.css"/>
+	<link rel="stylesheet" href="/css/lightbox.css" />
+
+</head>
+
+<body class="monBody">
+<div id="container">
+	<div id="header">
+	<img src="/image/staff_admin.jpg" alt="WROOM l'encyclopédie de la F1" />
+	</div>
+	<div id="menu">
+		<a href="/gestPilotes">PILOTES</a> |
+		<a href="/gestCircuits">CIRCUITS</a> |
+		<a href="/gestEcuries">ECURIES</a> |
+		<a href="/selectionGP">RESULTATS</a> |
+		<a href="/gestSponsors">SPONSORS</a> |
+		<a href="/gestFinances">FINANCES</a> |
+		<a href="/gestSponsorisations">SPONSORISATIONS</a> |
+		<a href="http://localhost:6800/">Retour au site</a>
+	</div>
+	<div id="contenu">
+		<br/>
+		<br/>
+			{{{body}}}
+	</div>
+				<div id="footer">
+					L'encyclopédie de la F1 depuis janvier 2020 (en NodeJS)
+					<br />
+					© IUT du Limousin DUT Informatique année 2
+					<br />
+					<br />
+                Appllication réalisée par Tristan Léger
+                <br />
+					<img src="/image/nodejs.png" id= "LogoNode" alt="Logo NodeJs" title="Logo Node.JS" />
+			</div>
+
+</div>
+</body>
+</html>

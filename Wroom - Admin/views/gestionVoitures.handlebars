@@ -1,0 +1,26 @@
+<div class="gestion">
+    <img src="image/cat_voiture.png" alt="VOITUUUUUUUUUREEEEE" />
+    <h1>Gestion des Voitures</h1>
+    <a href="/addVoiture"><img src="image/act_add.png" alt="Ajouter"/> Ajouter une voiture</a>
+
+    <table>
+        <thead>
+            <tr>
+                <td>Voiture</td>
+                <td>Type</td>
+                <td>Écurie</td>
+                <td>Actions</td>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each gestion}}
+                <tr>
+                    <td>{{this.voinom}}</td>
+                    <td>{{this.typelibelle}}</td>
+                    <td>{{this.ecunom}}</td>
+                    <td><a href="/suppVoiture/{{this.ecunum}}/{{this.voinum}}"><img src="image/act_delete.png" alt="Supprimer"/> Supprimer</a></td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

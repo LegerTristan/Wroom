@@ -1,0 +1,24 @@
+<h1 id="titre">Ajouter une sponsorisation</h1>
+
+<form class="ajout" action="/gestSponsorisations" method="POST">
+    <div class="groupLb">
+       <label>Pilote</label>
+       <label>Est sponsorisé par</label>
+   </div>
+    <div class="groupeInput">
+
+        <select name="pilnum">
+            {{#each pilotes}}
+                <option value="{{this.pilnum}}">{{this.pilnom}}</option>
+            {{/each}}
+        </select>
+
+        <select name="sponum">
+            {{#each sponsors}}
+                <option value="{{this.sponum}}">{{this.sponom}}</option>
+            {{/each}}
+        </select>
+
+        <input type="submit" value="AJOUTER" class="btnValider"/>
+    </div>
+</form>

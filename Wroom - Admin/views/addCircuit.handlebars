@@ -1,0 +1,34 @@
+<h1 id="titre">Ajouter un circuit</h1>
+
+<form class="ajout" action="/gestCircuits" method="post" enctype="multipart/form-data">
+    <div class="groupLb">
+       <label>Nom</label>
+       <label>Longueur</label>
+       <label>Pays</label>
+       <label>Image</label>
+       <label>Nombre de spectateurs</label>   
+       <label>Description</label>
+   </div>
+    <div class="groupeInput">
+            
+        <input type="text" name="cirnom" autofocus required />
+        <div class="lbInput">
+            <input type="text" name="cirlongueur" required>m</input>
+        </div>
+
+        <select id="pays" name="paynum" required>
+            {{#each pays}}
+                <option value="{{this.paynum}}">{{this.paynom}}</option>
+            {{/each}}
+        </select>
+
+        <input type="file" name="ciradresseimage" required />
+
+        <div class="lbInput">
+            <input type="text" name="cirnbspectateurs" required>personnes</input>
+        </div>
+        
+        <textarea name="cirtext" id="desc" required></textarea>
+        <input type="submit" value="AJOUTER" class="btnValider"/>
+    </div>
+</form>
